@@ -1,0 +1,38 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
+module.exports = {
+  siteMetadata: {
+    title: "Muhammad Dawood",
+    description:
+      "My Personal Portfolio and blog site, that focuses mainly on web technologies",
+  },
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extension: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-highlight-code",
+            options: {
+              terminal: "carbon",
+              theme: "night-owl",
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "posts",
+      },
+    },
+  ],
+}

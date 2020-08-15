@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+html,
+body {
+  font-family: "Roboto Mono", monospace;
+  transition: all 0.3s;
+}
+
+:root {
+  --bg-light: #ffffff;
+  --text-light: #000000;
+  --bg-dark: #30475e;
+  --text-dark: #ececec;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark .hamburger-open,
+body.dark .hamburger-close {
+  filter: invert(1);
+}
+
+body.dark .social__link,
+body.dark .nav__link,
+body.dark .branding_link,
+body.dark .blog-post__link {
+  color: var(--text-dark);
+}
+
+body.dark .nav {
+  background-color: #222831;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.branding {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.7em;
+}
+
+/* dark mode toggle */
+.toggle-btn {
+  position: relative;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.sun-icon,
+.moon-icon {
+  pointer-events: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 37px;
+  border-radius: 13px;
+  background: #3ef4ae;
+  top: 3px;
+  right: 3px;
+  transition: all 0.3s;
+}
+
+.toggle-btn.switch:after {
+  right: 30px;
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  border-right: 1px solid black;
+  background: #fff;
+  width: 0;
+  overflow-x: hidden;
+  transition: all 0.3s;
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.nav__item {
+  transition: all 0.2s;
+}
+
+.nav__item + .nav__item {
+  margin-top: 0.7rem;
+}
+
+.nav__item:hover {
+  width: min-content;
+  border-bottom: 4px solid #3ef4ae;
+}
+
+.nav.active {
+  width: 250px;
+}
+
+.hamburger-close {
+  position: absolute;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.hamburger-open,
+.hamburger-close {
+  cursor: pointer;
+}
+
+.branding {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-desc {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 3rem 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav__link,
+.social__link {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.socials {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__item + .social__item {
+  margin-left: 0.8rem;
+}
+
+.social__item:nth-child(1) {
+  border-bottom: 4px solid #3ef4ae;
+}
+.social__item:nth-child(2) {
+  border-bottom: 4px solid #1da1f2;
+}
+.social__item:nth-child(3) {
+  border-bottom: 4px solid #5851db;
+}
+
+/* .blog {
+} */
+
+.blog-post {
+  font-size: 1.3em;
+}
+
+.blog-post + .blog-post {
+  margin-top: 2rem;
+}
+
+.blog-post__title {
+  color: #3ef4ae;
+  font-weight: bold;
+}
+
+.blog-post__link {
+  text-decoration: underline;
+}
+
+@media (min-width: 400px) {
+  .wrapper {
+    position: absolute;
+    right: 2rem;
+  }
+
+  body.dark .nav {
+    background-color: inherit;
+  }
+
+  .hamburger-close,
+  .hamburger-open {
+    display: none;
+  }
+
+  header {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .nav {
+    position: static;
+    display: inline-block;
+    overflow-x: visible;
+    border: 0;
+    height: 100%;
+    width: max-content;
+  }
+
+  .navbar {
+    margin: 0;
+    display: flex;
+  }
+
+  .nav__item + .nav__item {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .branding {
+    margin-top: 0;
+  }
+
+  /* about me section */
+  main {
+    margin-top: 7rem;
+  }
+
+  .about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+  }
+
+  .about-desc {
+    width: 60%;
+    font-size: 1.3em;
+  }
+
+  .profile-img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1340px) {
+  main {
+    margin-top: 10rem;
+  }
+
+  .about-me {
+    margin-bottom: 10rem;
+  }
+
+  .about-desc {
+    font-size: 1.5em;
+  }
+}
