@@ -5,14 +5,18 @@ import useDidMount from "../hooks/useDidMount"
 
 const Toggle = () => {
   const [toggleDarkMode, setToggleDarkMode] = useState(() => {
-    if (localStorage.getItem("toggled") == null) {
-      return false
+    if (window) {
+      if (localStorage.getItem("toggled") == null) {
+        return false
+      }
+      const isDarkMode = JSON.parse(localStorage.getItem("toggled"))
+      if (isDarkMode) {
+        document.querySelector("body").classList.add("dark")
+      }
+      return isDarkMode
     }
-    const isDarkMode = JSON.parse(localStorage.getItem("toggled"))
-    if (isDarkMode) {
-      document.querySelector("body").classList.add("dark")
-    }
-    return isDarkMode
+
+    return false
   })
 
   const _toggleDarkMode = () => {
@@ -24,8 +28,9 @@ const Toggle = () => {
   useEffect(() => {
     // after initial render
     if (!isMounted) {
-      console.log("after initial render")
-      localStorage.setItem("toggled", toggleDarkMode)
+      if (window) {
+        localStorage.setItem("toggled", toggleDarkMode)
+      }
       document.querySelector("body").classList.toggle("dark")
     }
   }, [toggleDarkMode])
