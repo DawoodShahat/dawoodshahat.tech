@@ -4,20 +4,7 @@ import Moon from "../assets/moon.svg"
 import useDidMount from "../hooks/useDidMount"
 
 const Toggle = () => {
-  const [toggleDarkMode, setToggleDarkMode] = useState(() => {
-    if (window) {
-      if (localStorage.getItem("toggled") == null) {
-        return false
-      }
-      const isDarkMode = JSON.parse(localStorage.getItem("toggled"))
-      if (isDarkMode) {
-        document.querySelector("body").classList.add("dark")
-      }
-      return isDarkMode
-    }
-
-    return false
-  })
+  const [toggleDarkMode, setToggleDarkMode] = useState(false)
 
   const _toggleDarkMode = () => {
     setToggleDarkMode(!toggleDarkMode)
@@ -26,11 +13,17 @@ const Toggle = () => {
   const isMounted = useDidMount()
 
   useEffect(() => {
+    console.log("this ran")
+    if (localStorage.getItem("toggled") == null) return
+    const isDarkMode = JSON.parse(localStorage.getItem("toggled"))
+    setToggleDarkMode(isDarkMode)
+  }, [])
+
+  useEffect(() => {
     // after initial render
     if (!isMounted) {
-      if (window) {
-        localStorage.setItem("toggled", toggleDarkMode)
-      }
+      console.log("2nd effect ran")
+      localStorage.setItem("toggled", toggleDarkMode)
       document.querySelector("body").classList.toggle("dark")
     }
   }, [toggleDarkMode])

@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Profile from "../assets/profile.png"
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <div className="container about-me">
         <img className="profile-img" src={Profile} />
         <p className="about-desc">
@@ -35,6 +34,6 @@ export default function Home() {
           </li>
         </ul>
       </div>
-    </Layout>
+    </>
   )
 }

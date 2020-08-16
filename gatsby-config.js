@@ -13,6 +13,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/components/Layout.js"),
+      },
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
         extension: [".mdx", ".md"],
