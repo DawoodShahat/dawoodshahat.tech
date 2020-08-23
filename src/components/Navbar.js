@@ -11,7 +11,7 @@ const Navbar = ({ handleToggleHamburger, toggleMenu }) => {
       </button>
       <ul className="navbar">
         <li className="nav__item">
-          <Link to="/" className="nav__link">
+          <Link to="/projects" className="nav__link">
             Projects
           </Link>
         </li>
