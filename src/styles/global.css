@@ -5,6 +5,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 html,
 body {
@@ -17,6 +18,10 @@ body {
   --text-light: #000000;
   --bg-dark: #30475e;
   --text-dark: #ececec;
+
+  /* code blocks styling */
+  --deckgo-highlight-code-font-size: 1.4em;
+  --deckgo-highlight-code-font-family: "Fira Code", monospace;
 }
 
 body.dark {
@@ -222,8 +227,12 @@ ul {
 }
 
 .blog-post__title {
-  color: #3ef4ae;
+  color: #32c78e;
   font-weight: bold;
+}
+
+.blog-post__header {
+  margin-bottom: 1rem;
 }
 
 .blog-post__link {

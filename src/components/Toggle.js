@@ -12,6 +12,7 @@ const Toggle = () => {
 
   const isMounted = useDidMount()
 
+  // TODO: Make this a hook instead
   useEffect(() => {
     console.log("this ran")
     if (localStorage.getItem("toggled") == null) return
