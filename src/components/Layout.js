@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
             <Toggle />
           </div>
           <Link className="branding_link" to="/">
-            <h1 className="branding">Muhammad Dawood</h1>
+            <h1 className="branding">Dawood Shahat</h1>
           </Link>
           <Navbar
             handleToggleHamburger={_toggleHamburger}
