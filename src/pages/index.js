@@ -18,17 +18,20 @@ export default function Home() {
       <div className="container">
         <ul className="socials">
           <li className="social__item">
-            <a href="" className="social__link">
+            <a href="https://github.com/DawoodShahat" className="social__link">
               github
             </a>
           </li>
           <li className="social__item">
-            <a href="" className="social__link">
+            <a href="https://twitter.com/dawoodshahat" className="social__link">
               twitter
             </a>
           </li>
           <li className="social__item">
-            <a href="" className="social__link">
+            <a
+              href="https://www.instagram.com/dawood_codes/"
+              className="social__link"
+            >
               instagram
             </a>
           </li>
