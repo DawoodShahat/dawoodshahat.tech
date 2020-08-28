@@ -1,0 +1,45 @@
+.card {
+  border: 1px solid #dedede;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.3rem;
+}
+
+.card {
+  margin: 0 1rem 1rem 0;
+}
+
+.card__title {
+  color: #32c78e;
+  margin-bottom: 1rem;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+  font-weight: bolder;
+}
+
+.list__item + .list__item {
+  margin-left: 1rem;
+}
+
+.card__link {
+  margin: 1rem;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 450px) {
+  .card {
+    width: 30%;
+  }
+}

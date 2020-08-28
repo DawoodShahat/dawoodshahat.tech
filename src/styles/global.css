@@ -37,7 +37,8 @@ body.dark .hamburger-close {
 body.dark .social__link,
 body.dark .nav__link,
 body.dark .branding_link,
-body.dark .blog-post__link {
+body.dark .blog-post__link,
+body.dark .card__link {
   color: var(--text-dark);
 }
 
@@ -215,9 +216,6 @@ ul {
   border-bottom: 4px solid #5851db;
 }
 
-/* .blog {
-} */
-
 .blog-post {
   font-size: 1.3em;
 }
@@ -237,6 +235,21 @@ ul {
 
 .blog-post__link {
   text-decoration: underline;
+}
+
+/* projects section */
+.container.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects__title {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 400px) {
