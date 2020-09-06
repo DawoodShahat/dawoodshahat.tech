@@ -7,9 +7,13 @@ export default function Projects() {
       <h1 className="projects__title">Projects</h1>
       <div className="projects">
         <ProjectCard
-          title="Code Sharing Platform"
-          description="A code sharing platform, that lets you share your code into a central repository"
-          techStack={["Javascript", "NodeJS", "MongoDB", "ExpressJS"]}
+          title="Write Ideas"
+          description="This application lets you write everyday, and keeps track of it. That is also completely private, It makes you stick to your writing habit"
+          techStack={["ReactJS", "NodeJS", "MongoDB", "ExpressJS"]}
+          links={{
+            github: "https://github.com/DawoodShahat/write-ideas",
+            live: "https://arcane-cliffs-18850.herokuapp.com/",
+          }}
         />
       </div>
     </div>
