@@ -136,15 +136,33 @@ button {
 
 .nav__item {
   transition: all 0.2s;
+  position: relative;
+  z-index: 10;
 }
 
 .nav__item + .nav__item {
   margin-top: 0.7rem;
 }
 
+.nav__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0.4rem;
+  height: 0;
+  width: 100%;
+  background: #3ef4ae;
+  z-index: -1;
+  transition: height 0.3s;
+}
+
+.nav__link:hover::after {
+  height: 0.6rem;
+  padding: 0 0.23rem;
+}
+
 .nav__item:hover {
   width: min-content;
-  border-bottom: 4px solid #3ef4ae;
 }
 
 .nav.active {
