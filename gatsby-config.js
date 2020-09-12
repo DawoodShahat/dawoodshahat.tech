@@ -11,6 +11,12 @@ module.exports = {
       "My Personal Portfolio and blog site, that focuses mainly on web technologies",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-177843382-1",
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-layout",
