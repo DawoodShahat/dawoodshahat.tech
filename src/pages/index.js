@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="container about-me">
-        <img className="profile-img" src={Profile} />
+        <img className="profile-img" alt="profile image" src={Profile} />
         <p className="about-desc">
           I’m an aspiring Software Developer, technology enthusiast and a final
           year Software Engineering student. In the past I have worked on many
