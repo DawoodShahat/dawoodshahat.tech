@@ -1,29 +1,26 @@
 import React from "react"
 import "./projectcard.css"
+import GithubLogo from "../assets/github-logo.svg"
 
-const List = ({ list }) => (
-  <ul className="list">
-    {list.map((item, index) => (
-      <li key={index} className="list__item">
-        {item}
-      </li>
-    ))}
-  </ul>
-)
-
-const ProjectCard = ({ title, description, techStack, links = {} }) => {
+const ProjectCard = ({ title, description, projectScreenshot, links = {} }) => {
   const { github, live } = links
   return (
     <div className="card">
       <h3 className="card__title">{title}</h3>
+      <img
+        className="card__image"
+        src={projectScreenshot}
+        alt="project write ideas"
+      />
       <p className="card__description">{description}</p>
-      <List list={techStack} />
-      <a className="card__link" href={github}>
-        Github
-      </a>
-      <a className="card__link" href={live}>
-        Live
-      </a>
+      <div className="card__links">
+        <a className="card__link" href={github}>
+          <img src={GithubLogo} alt="github" />
+        </a>
+        <a className="card__link" href={live}>
+          Live
+        </a>
+      </div>
     </div>
   )
 }

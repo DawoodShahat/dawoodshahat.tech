@@ -1,5 +1,6 @@
 import React from "react"
 import ProjectCard from "../components/ProjectCard"
+import WriteIdeasScreenShot from "../assets/writeideas.png"
 
 export default function Projects() {
   return (
@@ -8,8 +9,8 @@ export default function Projects() {
       <div className="projects">
         <ProjectCard
           title="Write Ideas"
+          projectScreenshot={WriteIdeasScreenShot}
           description="This application lets you write everyday, and keeps track of it. That is also completely private, It makes you stick to your writing habit"
-          techStack={["ReactJS", "NodeJS", "MongoDB", "ExpressJS"]}
           links={{
             github: "https://github.com/DawoodShahat/write-ideas",
             live: "https://arcane-cliffs-18850.herokuapp.com/",

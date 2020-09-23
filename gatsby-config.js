@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Dawood Shahat",
     description:
-      "My Personal Portfolio and blog site, that focuses mainly on web technologies",
+      "My Personal Portfolio and blog site, that focuses mainly on React, Node and Javascript and many other Web technologies",
     siteUrl: "https://www.dawoodshahat.tech",
   },
   plugins: [
