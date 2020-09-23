@@ -14,7 +14,6 @@ const Toggle = () => {
 
   // TODO: Make this a hook instead
   useEffect(() => {
-    console.log("this ran")
     if (localStorage.getItem("toggled") == null) return
     const isDarkMode = JSON.parse(localStorage.getItem("toggled"))
     setToggleDarkMode(isDarkMode)
@@ -23,7 +22,6 @@ const Toggle = () => {
   useEffect(() => {
     // after initial render
     if (!isMounted) {
-      console.log("2nd effect ran")
       localStorage.setItem("toggled", toggleDarkMode)
       document.querySelector("body").classList.toggle("dark")
     }

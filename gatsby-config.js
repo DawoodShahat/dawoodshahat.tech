@@ -9,8 +9,10 @@ module.exports = {
     title: "Dawood Shahat",
     description:
       "My Personal Portfolio and blog site, that focuses mainly on web technologies",
+    siteUrl: "https://www.dawoodshahat.tech",
   },
   plugins: [
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
