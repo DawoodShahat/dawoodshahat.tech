@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "components/Hero";
 
 export default function Home() {
   return (
@@ -6,7 +7,9 @@ export default function Home() {
       <Head>
         <title>Dawood Shahat</title>
       </Head>
-      <main></main>
+      <main className="container">
+        <Hero />
+      </main>
     </div>
   );
 }

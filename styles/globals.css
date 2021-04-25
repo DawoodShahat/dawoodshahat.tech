@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.container {
+  max-width: 960px;
+  padding: 2rem;
+  margin: auto;
+}
+
+:root {
+  --primary-color: #1d4d9f;
+  --secondary-color: #8cabd9;
+}
