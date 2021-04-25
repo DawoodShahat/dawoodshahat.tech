@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 2rem;
+  background-color: papayawhip;
+
+  .branding {
+    span {
+      margin-right: 0.3rem;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+
+    &__item {
+      margin-left: 1.8rem;
+    }
+  }
+}

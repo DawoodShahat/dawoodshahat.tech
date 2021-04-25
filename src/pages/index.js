@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Dawood Shahat</title>
       </Head>
-      <h1>🚀 Launcing soon!</h1>
+      <main></main>
     </div>
   );
 }
